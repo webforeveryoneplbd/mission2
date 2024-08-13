@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Badges</title>
+</head>
+<body>
+    <h1>Gestion des Badges</h1>
+
+    <h2>Numéros de badge disponibles</h2>
+    <ul>
+        {% for badge in badges_disponibles %}
+        <li>{{ badge }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Nombre de changements de badge par agent</h2>
+    <ul>
+        {% for matricule, nb_changements in changement_badges.items() %}
+        <li>{{ matricule }}: {{ nb_changements }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
